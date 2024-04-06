@@ -7,6 +7,6 @@ Este projeto é focado na criação de um formulário de cadastro de novos aluno
 ## Tecnologias Utilizadas
 
 - **Front-end**: HTML, CSS e JavaScript
-- **Back-end**: PHP com MySql
+- **Back-end**: PHP e PostgreSQL
   
 ## 
