@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto é focado na criação de um formulário de cadastro para um site. O objetivo é coletar informações relevantes dos usuários para criar uma conta personalizada para eles.
+Este projeto é focado na criação de um formulário de cadastro de novos alunos para uma instituição educacional. O objetivo é coletar informações relevantes dos usuários para criar um cadastro no sistema.
 
 ## Tecnologias Utilizadas
 
