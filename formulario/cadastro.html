@@ -4,46 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <style>
-              
-
-    </style>
+    <link rel="stylesheet" href="css/fomulario.css">
 </head>
 <body>
-        <h1>Seja bem-Vindo!</h1>
-        <h2>Faça seu cadastro</h2>
-        <DIV>
-            <form action="cadastro.php"   method="post"  autocomplete="off">
-                <p><label for="nome"></label> 
-                    <input type="text"  id placeholder="nome"></p> 
-                <p><label for="sobrenome"></label> 
-                    <input type="text"  id placeholder="sobrenome"></p>
-                    <p><label for="emal "></label> 
-                        <input type="text"  id placeholder="email"></p>
-                        <p><label for="telefone"></label> 
-                            <input type="text"  id placeholder="telefone"></p>
-                            <p><label for="data de nascimento"></label> 
-                                <input type="text"  id placeholder="data de nascimento"></p>   
-                                <p><label for="cpf"></label> 
-                                    <input type="text"  id placeholder="cpf"></p>       
-                                    <select id aria-placeholder="sexo">
-                                        <option value =""disabled selected hidden>selecione seu sexo</option>
-                                        <option value="masculino">masculino</option>
-                                        <option value="feminino">feminino</option>
-                                        <option value="não binari">não binare</option>
-                                    </select> <br><br>
-                
-
-                 <input type="submit" value="entrar"></p>
-
-                
+    <main>
+        <article class="login">
+            <h1 id="saldacao">Seja bem-vindo!</h1>
+            <h2 id="saldacao">Faça seu cadastro..</h2>
+            <form action="login.php" method="post">
+                <input type="text" placeholder="Nome" maxlength="15" required>
+                <input type="text" placeholder="Sobrenome" required>
+                <input type="email" class="cadastro" placeholder="E-mail" required><br>
+                <input type="tel" placeholder="Telefone" required>
+                <input type="date" placeholder="Data de nascimento" required>
+                <input type="number" placeholder="CPF" maxlength="11" required>
+                <input type="text" placeholder="Sexo" required>
+                <input type="text" class="cadastro" placeholder="Selecione seu Turno" required><br>
+                <input type="password" class="cadastro" placeholder="Senha" required><br>
+                <input type="password" class="cadastro" placeholder="Corfirmar Senha" required><br><br>
+                <input id="botao" type="submit" value="Confirmar">
             </form>
-         
-
-        </DIV>
-  
-
-
-
+            <p>Ja tem conta?<a href="login.html">Conecte-se.</a></p>
+        </article>
+        
+        <article class="esquerdo">
+            <img src="imagens/icone-inicio.png" id="icone" alt="">
+            <h1 id="esquerdo">Elite</h1>
+            <p id="esquerdo">Explore o mundo do conhecimento ao atravesar nosso portal, abrindo as portas para uma experiencia educacional unica!</p>
+            <img id="caderno" src="imagens/imagem-caderno.png" alt="">
+        </article>
+    </main>
 </body>
 </html>

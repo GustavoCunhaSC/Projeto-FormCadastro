@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/fomulario.css">
 </head>
 <body>
     <main>
-        <article>
+        <article class="login">
             <h1 id="saldacao">Seja bem-vindo!</h1>
-            <h2 id="saldacao">Faça login na sua conta.</h2>
+            <h2 id="saldacao">Faça login na sua conta.</h2><br><br>
             <form action="login.php" method="post">
-                <input id="email" type="email" placeholder="Digite seu Email" required><br><br>
-                <input id="senha" type="password" placeholder="Digite sua Senha" required>
+                <input class="login" type="email" placeholder="Digite seu E-mail" required><br><br>
+                <input class="login" type="password" placeholder="Digite sua Senha" required>
                 <a id="rsenha" href="">Esqueci a senha</a><br><br>
-                <input id="botao" type="submit" value="Entrar">
+                <input id="botao" type="submit" value="Entrar"><br><br>
             </form>
             <p>Não tem conta ainda?<a href="cadastro.html">Cadastre-se.</a></p>
         </article>
-        <aside>
+        <article class="esquerdo">
+            <img src="imagens/icone-inicio.png" id="icone" alt="">
             <h1 id="esquerdo">Elite</h1>
             <p id="esquerdo">Explore o mundo do conhecimento ao atravesar nosso portal, abrindo as portas para uma experiencia educacional unica!</p>
-            <img src="imagens/imagem-caderno.jpg" alt="">
-        </aside>
+            <img id="caderno" src="imagens/imagem-caderno.png" alt="">
+        </article>
     </main>
 </body>
 </html>
