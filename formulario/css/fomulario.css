@@ -1,24 +1,46 @@
+:root {
+    --main-color: rgb(146, 139, 139);
+    --article-colortext:black;
+    --input-botaocolor: white;
+    --input-botaobackcolor:black;
+    --a-color:black;
+
+    --articleesquerdo-backcolor:rgb(179, 174, 174);
+    
+}
+
+.dark-mode:root {
+    --main-color:#091e3a;
+    --article-colortext:white;
+    --input-botaocolor: black;
+    --input-botaobackcolor:white;
+    --a-color:white;
+
+    --articleesquerdo-backcolor:#404040;
+}
+
 body{
-    background-color: rgba(18, 100, 114, 0.979);
+    background-color: rgb(22, 79, 94);
     overflow: hidden;
 }
 
 main{
-    background-color: rgb(146, 139, 139);
+    background-color: var(--main-color);
     border-radius: 10px;
     margin: auto;
     max-width: 1000px;
     max-height: 510px;
     margin-top: 7%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.582);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.582);
 }
 
 /*
-    css relacionado ao lado direito da tala de login mais especifico da tag article e seu conteudo.
+    css relacionado ao lado direito da tala de login mais especifico da tag article da class:login e seu conteudo.
 */
 
 article.login{
     display: block;
+    color: var(--article-colortext);
     float: right;
     width: 48%;
     height: 100%;
@@ -40,8 +62,8 @@ input.login{
 input#botao {
     border-radius: 5px;
     border: solid rgba(255, 255, 255, 0);
-    color: white;
-    background-color: black;
+    color: var(--input-botaocolor);
+    background-color: var(--input-botaobackcolor);
     font-size: 20px;
     text-align: center;
 }
@@ -51,7 +73,7 @@ h1#saldacao{
     text-align: left;
     margin-left: 5%;
     margin-bottom: 1%;
-    margin-top: 15%;
+    margin-top: 8%;
 }
 
 h2#saldacao{
@@ -64,6 +86,7 @@ a#rsenha{
     display: block;
     float: right;
     margin-right: 7%;
+    color: var(--a-color);
  }
 
  /*
@@ -78,7 +101,7 @@ input{
     border: solid rgba(255, 255, 255, 0);
     font-size: 15px;
     text-align: left;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 input.cadastro{
@@ -90,7 +113,8 @@ input.cadastro{
  */
 
 article.esquerdo{
-    background-color: rgb(179, 174, 174);
+    background-color: var(--articleesquerdo-backcolor);
+    color: var(--article-colortext);
     width: 50%;
     text-align: right;
     border-left: solid rgba(255, 255, 255, 0);
