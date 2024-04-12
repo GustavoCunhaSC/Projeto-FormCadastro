@@ -1,9 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --main-color: rgb(146, 139, 139);
     --article-colortext:black;
@@ -67,7 +61,7 @@ div.ball{
 
 }
 i{
-    color: #404040;
+    opacity: 0;
 }
 
 input#switch:checked + label .ball{
