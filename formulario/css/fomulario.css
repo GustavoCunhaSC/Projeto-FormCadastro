@@ -67,7 +67,7 @@ div.ball{
 
 }
 i{
-    opacity: 0;
+    color: #404040;
 }
 
 input#switch:checked + label .ball{
