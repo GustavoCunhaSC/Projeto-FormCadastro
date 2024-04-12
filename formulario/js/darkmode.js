@@ -1,5 +1,5 @@
-const $html = document.querySelector('html');
-const $checkbox = document.querySelector('#switch');
+const $html = document.querySelector('html')
+const $checkbox = document.querySelector('#switch')
 
 var theme = localStorage.getItem("dark")
 $html.classList.add(theme)
