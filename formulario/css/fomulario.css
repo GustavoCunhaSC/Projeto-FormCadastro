@@ -1,3 +1,6 @@
+/* 
+Essa parte do codigo css e responsavel pela alteração da cores entre o tema claro e escuro. 
+*/
 :root {
     --main-color: rgb(146, 139, 139);
     --article-colortext:black;
@@ -68,11 +71,17 @@ input#switch:checked + label .ball{
     transform: translateX(31px);
 }
 
+/* 
+Esse body siplismente munda o funto da tela.
+*/
 body{
     background-color: rgb(22, 79, 94);
     overflow: hidden;
 }
 
+/* 
+O main delimita a parte da tela em que minha aplicação vai ocupar 
+*/
 main{
     background-color: var(--main-color);
     border-radius: 10px;
@@ -86,7 +95,6 @@ main{
 /*
     css relacionado ao lado direito da tala de login mais especifico da tag article da class:login e seu conteudo.
 */
-
 article.login{
     display: block;
     color: var(--article-colortext);
@@ -97,8 +105,6 @@ article.login{
     margin-left: 0;
 
 }
-
-
 
 input.login{
     border-radius: 5px;
@@ -115,8 +121,19 @@ input#botao {
     background-color: var(--input-botaobackcolor);
     font-size: 20px;
     text-align: center;
+    cursor: pointer;
 }
 
+a#rsenha{
+    display: block;
+    float: right;
+    margin-right: 7%;
+    color: var(--a-color);
+ }
+
+ /*
+Os intens com a classe saldação ocorrem nas duas telas tanto de login como de cadastro
+*/
 h1#saldacao{
     font-size: 40px;
     text-align: left;
@@ -131,13 +148,6 @@ h2#saldacao{
     margin-top: 1%;
 }
 
-a#rsenha{
-    display: block;
-    float: right;
-    margin-right: 7%;
-    color: var(--a-color);
- }
-
  /*
     css relacionado ao lado direito da tala de cadastro mais especifico da tag article e seu conteudo.
 */
@@ -151,6 +161,25 @@ input{
     font-size: 15px;
     text-align: left;
     margin-top: 2%;
+}
+
+select{
+    width: 43%;
+    margin-left: 1%;
+    margin-right: 2%;
+    border-radius: 5px;
+    border: solid rgba(255, 255, 255, 0);
+    font-size: 16px;
+    text-align: left;
+    margin-top: 2%;
+}
+
+select.cadastro{
+    width: 91%;
+}
+
+select:invalid{
+    color: gray;
 }
 
 input.cadastro{
@@ -197,5 +226,3 @@ img#icone{
     margin-left: 35%;
     margin-top: 1%;
 }
-
-
