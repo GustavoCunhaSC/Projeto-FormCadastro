@@ -68,7 +68,7 @@ i{
 }
 
 input#switch:checked + label .ball{
-    transform: translateX(31px);
+    transform: translateX(155%);
 }
 
 /* 
@@ -76,7 +76,7 @@ Esse body siplismente munda o funto da tela.
 */
 body{
     background-color: rgb(22, 79, 94);
-    overflow: hidden;
+
 }
 
 /* 
@@ -115,6 +115,9 @@ input.login{
 }
 
 input#botao {
+    display: block;
+    width: 50%;
+    margin-left: 25%;
     border-radius: 5px;
     border: solid rgba(255, 255, 255, 0);
     color: var(--input-botaocolor);
@@ -153,8 +156,8 @@ h2#saldacao{
 */
 
 input{
-    width: 42%;
-    margin-left: 1%;
+    width: 41%;
+    margin-left: 2%;
     margin-right: 2%;
     border-radius: 5px;
     border: solid rgba(255, 255, 255, 0);
@@ -164,8 +167,8 @@ input{
 }
 
 select{
-    width: 43%;
-    margin-left: 1%;
+    width: 44%;
+    margin-left: 2%;
     margin-right: 2%;
     border-radius: 5px;
     border: solid rgba(255, 255, 255, 0);
@@ -175,7 +178,7 @@ select{
 }
 
 select.cadastro{
-    width: 91%;
+    width: 92%;
 }
 
 select:invalid{
@@ -226,3 +229,246 @@ img#icone{
     margin-left: 35%;
     margin-top: 1%;
 }
+
+div#mobile{
+    display: none;
+}
+
+
+@media only screen and (max-width: 918px) {
+    h1#esquerdo{
+        font-size: 55px;
+        text-align: right;
+    }
+
+    h1#saldacao{
+        font-size: 29px;
+    }
+
+    h2#saldacao{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    img#icone{
+        display: block;
+        float: left;
+        width: 32%;
+        margin-left: 18%;
+        margin-top: 1%;
+    }
+    
+    h1#saldacao{
+        font-size: 29px;
+    }
+
+    h2#saldacao{
+        font-size: 15px;
+    }
+
+    h1#esquerdo{
+        font-size: 54px;
+        text-align: right;
+    }
+
+    p#esquerdo{
+        margin-left: 20%;
+        margin-right: 5%;
+        margin-top: 0%;
+        text-align: right;
+        font-size: 14px;
+        padding-bottom: 10%;
+    }
+
+    input{
+        width: 41%;
+        margin-left: 2%;
+        margin-right: 2%;
+        border-radius: 5px;
+        border: solid rgba(255, 255, 255, 0);
+        font-size: 12px;
+        text-align: left;
+        margin-top: 1.5%;
+    }
+
+    input#botao {
+        display: block;
+        width: 50%;
+        margin-left: 25%;
+        border-radius: 5px;
+        border: solid rgba(255, 255, 255, 0);
+        color: var(--input-botaocolor);
+        background-color: var(--input-botaobackcolor);
+        font-size: 12px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    select{
+        width: 44%;
+        margin-left: 2%;
+        margin-right: 2%;
+        border-radius: 5px;
+        border: solid rgba(255, 255, 255, 0);
+        font-size: 13px;
+        text-align: left;
+        margin-top: 1.5%;
+    }
+    
+    select.cadastro{
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 555px) {
+    img#icone{
+        display: block;
+        float: left;
+        width: 24%;
+        margin-left: 35%;
+        margin-top: 1%;
+    }
+
+    article.esquerdo{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    article.login{
+        width: 92%;
+        text-align: center;
+        background-color: var(--main-color);
+        margin: auto;
+        margin-right: 4%;
+        border-radius: 10px;
+    }
+
+    h1#saldacao{
+        font-size: 24px;
+    }
+
+    h2#saldacao{
+        font-size: 15px;
+    }
+
+    a#rsenha{
+        font-size: 12px;
+        margin-top: 1%;
+    }
+
+    div#mobile{
+        display: block;
+        width: 90%;
+        padding-top: 10%;
+        margin: auto;
+    }
+    h1#esquerdo{
+        color: white;
+        font-size: 48px;
+        text-align: right;
+    }
+
+    p#esquerdo{
+        color: white;
+        width: 90%;
+        text-align: right;
+        font-size: 12px;
+        margin: auto;
+    }
+
+    img#icone{
+        padding-top: 9%;
+        margin-left: 35%;
+    }
+
+    .dark-mode:root {
+        --main-color:black;
+        --article-colortext:white;
+        --input-botaocolor: black;
+        --input-botaobackcolor:white;
+        --a-color:white;
+    
+        --articleesquerdo-backcolor:#404040;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    img#icone{
+        display: block;
+        float: left;
+        width: 24%;
+        margin-left: 35%;
+        margin-top: 1%;
+    }
+
+    article.esquerdo{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    article.login{
+        width: 92%;
+        text-align: center;
+        background-color: var(--main-color);
+        margin: auto;
+        margin-right: 4%;
+        border-radius: 10px;
+    }
+
+    h1#saldacao{
+        font-size: 24px;
+    }
+
+    h2#saldacao{
+        font-size: 15px;
+    }
+
+    a#rsenha{
+        font-size: 12px;
+        margin-top: 1%;
+    }
+
+    div#mobile{
+        display: block;
+        width: 90%;
+        padding-top: 10%;
+        margin: auto;
+    }
+    h1#esquerdo{
+        color: white;
+        font-size: 35px;
+        text-align: right;
+    }
+
+    p#esquerdo{
+        color: white;
+        width: 90%;
+        text-align: right;
+        font-size: 12px;
+        margin: auto;
+    }
+
+    img#icone{
+        padding-top: 9%;
+        margin-left: 35%;
+    }
+
+    .dark-mode:root {
+        --main-color:black;
+        --article-colortext:white;
+        --input-botaocolor: black;
+        --input-botaobackcolor:white;
+        --a-color:white;
+    
+        --articleesquerdo-backcolor:#404040;
+    }
+}
+
+
+
+
+
