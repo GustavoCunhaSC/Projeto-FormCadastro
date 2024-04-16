@@ -251,6 +251,9 @@ div#mobile{
 }
 
 @media only screen and (max-width: 768px) {
+    main{
+        margin-top: 12%;
+    }
 
     img#icone{
         display: block;
@@ -362,7 +365,7 @@ div#mobile{
     div#mobile{
         display: block;
         width: 90%;
-        padding-top: 10%;
+        padding-top: 6%;
         margin: auto;
     }
     h1#esquerdo{
@@ -377,6 +380,7 @@ div#mobile{
         text-align: right;
         font-size: 12px;
         margin: auto;
+        padding-bottom: 0;
     }
 
     img#icone{
