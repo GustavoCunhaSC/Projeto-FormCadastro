@@ -28,16 +28,21 @@ if(!empty($_POST)){
       ':cpf'=> $_POST['cpf'],
       ':sexo' => $_POST['sexo']
     );
-    // Executar a SQL(INSERT)
-
     
-  } catch (\Exception $e) {
+    // Executar a SQL(INSERT)
+    // Realizar a inserção das informações no BD
+    if($stmt ->execute($dados)){
+      header("Location: ../login.html?msgSucesso=Cadastro realizado com sucesso!");
+    }
+    
+  } catch (PDOException $e) {
     //throw $th;
+    header("Location: ../cadasto.html?msgErro=Falha ao cadastrar...");
   }
 } else{
   header('Location: ../cadastro.html?msgErro=Erro de acesso.');
 }
-// Realizar a inserção das informações no BD
+die();
 // Redirecionar para a página inicial (logi) c/ mensagem de erro/sucesso
 
 ?>
