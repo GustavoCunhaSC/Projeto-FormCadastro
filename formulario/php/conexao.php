@@ -1,10 +1,7 @@
-<?php
-//...
-
-try {
-
-	$dsn = new PDO("pgsql:host=". HOST . ";port=".PORT.";dbname=" . DBNAME .";user=" . USER . ";password=" . PASSWORD, array(PDO::ATTR_PERSISTENT => true)) ;
-
-} catch (PDOException $e) {
-	echo 'A conexão falhou e retornou a seguinte mensagem de erro: ' .$e->getMessage();
+<?php 
+$conexao = pg_connect("host=localhost port=5432 user=postgres password=1234 dbname=db_elite");
+if (!$conexao){
+  die("conexão com PostgreSQL falhou");
 }
+echo "conexão com PostgreSQL funcionou";
+?>
