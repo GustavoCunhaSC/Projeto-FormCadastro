@@ -11,9 +11,9 @@ if(!empty($_POST)){
     // Prepara as informações
     // Montar a SQL(pgsql)
     $sql = "INSERT INTO alunos
-            (nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos)
+            (nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos, senha_aluno)
             VALUES
-            (:nome, :sobrenome, :email, :telefone, :dataDeAniversario, :cpf, :sexo)";
+            (:nome, :sobrenome, :email, :telefone, :dataDeAniversario, :cpf, :sexo, :senha)";
 
     // Preparar a SQL(pdo)
     $stmt = $pdo ->prepare($sql);
@@ -26,7 +26,8 @@ if(!empty($_POST)){
       ':telefone'=> $_POST['telefone'],
       ':dataDeAniversario' => $_POST['dataDeAniversario'],
       ':cpf'=> $_POST['cpf'],
-      ':sexo' => $_POST['sexo']
+      ':sexo' => $_POST['sexo'],
+      ':senha'=> $_POST['senha']
     );
     
     // Executar a SQL(INSERT)
