@@ -6,11 +6,11 @@ echo"<pre>";
 echo"</pre>";
 die();
 /* */
-// Iniciar SESSAO(session_start)
-session_start();
 
 // Verifica se esta chegando dados por POST;
 if(!empty($_POST)){
+  // Iniciar SESSAO(session_start)
+  session_start();
   try {
     // Montar a SQL
     $sql = "SELECT nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos FROM alunos WHERE email_alunos = :email AND senha_aluno = :senha";
@@ -42,7 +42,7 @@ if(!empty($_POST)){
       $_SESSION['sexo_alunos'] = $result['sexo_alunos'];
 
       // Redirecionar p/ pagina inicial (ambiente logado)
-      header('Location:./pages/alunos.php');
+      header('Location:./pages/index.php');
     } else{ //Resultado da consulta não trouxe nenhum registro
       // Senao, retorna falha na autenticação
       // Destruir sessao
@@ -57,5 +57,5 @@ if(!empty($_POST)){
 } else{
   header('Location:../login.html?msgErro=Acesso não permitido ');
 }
-
+die(); 
 ?>
