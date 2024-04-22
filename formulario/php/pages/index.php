@@ -1,16 +1,31 @@
 <?php
+  require_once '../conexao.php';
    session_start();
  if(empty($_SESSION)){
   session_destroy();
    header("Location: ../../login.html?msgErro=Você precisao se autenticar");
    die();
   } 
- 
- /*
- echo "estou logado";
- echo"<pre>";
-   print_r($_SESSION);
- echo"</pre>";*/
+ $nomezin = $_SESSION['cpf_alunos'];
+  $alunos = array();
+  $sql = "SELECT * FROM alunos WHERE cpf_alunos = '$nomezin'";
+  try {
+    $stmt = $pdo->prepare($sql);
+    if($stmt->execute()){
+      // Execução da SQL OK
+      $alunos = $stmt->fetchAll();
+      /*echo "estou logado";
+      echo"<pre>";
+        print_r($alunos);
+      echo"</pre>";
+      die(); */
+  }
+  else{
+    die("Falha ao executar SQL");
+  }
+} catch (PDOException $e) {
+  die($e -> getMessage());
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -27,5 +42,36 @@
     </div>
     <a href="../logout.php" class="btn btn-dark">Sair</a>
   </div>
+  <?php if (!empty($alunos)) { ?>
+    <!-- A tabela será apresentada aqui  -->
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nome </th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Nascimento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach($alunos as $m) { ?>
+            <tr>
+              <td scope="row"> <?php echo $m['nome_alunos']; ?> </td>
+              <td scope="row"> <?php echo $m['sobrenome_alunos']; ?> </td>
+              <td scope="row"> <?php echo $m['cpf_alunos']; ?> </td>
+              <td scope="row"> <?php echo $m['email_alunos']; ?> </td>
+              <td scope="row"> <?php echo $m['telefone_alunos']; ?> </td>
+              <td scope="row"> <?php echo $m['dtnasci_alunos']; ?> </td>
+            </tr>
+
+          <?php } ?>
+           
+        </tbody>
+      </table>
+    </div>
+  <?php } ?>
 </body>
 </html>
