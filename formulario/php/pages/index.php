@@ -25,7 +25,7 @@
     <div class="col-md-11">
       <h2 class="title">Olá <?php echo $_SESSION['nome_alunos'];?>, seja bem vindo(a)</h2>
     </div>
-    <a href="logout.php" class="btn btn-dark">Sair</a>
+    <a href="../logout.php" class="btn btn-dark">Sair</a>
   </div>
 </body>
 </html>
