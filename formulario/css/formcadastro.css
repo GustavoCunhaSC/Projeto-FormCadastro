@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(35,58,79);
+    background: linear-gradient(90deg, rgba(35,58,79,1) 44%, rgba(63,103,142,1) 86%); 
+}
+
+.container{
+    align-items: center;
+    justify-content: center;
+    max-width: 1033px;
+    height: 100vh;
+    display: flex;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: #A2A2A2;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lado esquerdo */
+
+#form-img{
+    flex-direction: column;
+    width: 50%;
+    background-color: #CCCCCC;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px 10px;
+    height: 585px;
+}
+
+#form-img-logo{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 95%;
+    padding: 10px 20px;
+}
+
+#form-img-logo img{
+    width: 127px;
+}
+
+#form-img-logo p{
+    font-family: Inria Serif;
+    font-size: 83px;
+    color: #242424;
+}
+
+#form-img-descricao{
+    text-align: center;
+}
+
+#form-img-descricao p{
+    font-family: Anonymous Pro;
+    font-size: 20px;
+    text-align: right;
+    margin: 10px 35px 20px;
+}
+
+#form-img-descricao img{
+    width: 90%;
+    height: 265px;
+}
+
+/* Lado Direito */
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 585px;
+}
+
+.topo-form{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sub-form{
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.modo-escuro{
+    text-align: right;
+    height: fit-content;
+}
+
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 35.5px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #606060;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 0.3em;
+    bottom: 0.2em;
+    background-color: white;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+.switch input:checked + .slider {
+    background-color: white;
+    color: #606060;
+}
+  
+.switch input:checked + .slider:before {
+    transform: translateX(2.6em);
+    background-color: #606060;
+    height: 28px;
+    width: 28px;
+}
+
+.dark-mode {
+    background-color: #091E3A;
+    color: #fff;
+    /* Adicione mais estilos conforme necessário */
+}
+
+.recepcao{
+    margin: 10px 0px;
+    text-align: left;
+}
+
+.recepcao h3{
+    font-size: 37px;
+    font-family: Inria Serif;
+    color: #242424;
+}
+
+.recepcao p{
+    font-size: 27px;
+    font-family: Inter;
+    color: #242424;
+}
+
+#double-format{
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    display: flex;
+    gap: 10px;
+}
+
+#double-format input{
+    width: 100%;
+    border-radius: 10px;
+    height: 33px;
+    margin: 18px 0px 0px;
+    padding: 7px 25px;
+    font-size: 17px;
+    border: 0.5;
+}
+
+#double-format select{
+    width: 100%;
+    border-radius: 10px;
+    height: 35px;
+    margin: 18px 0px 0px;
+    padding: 7px 25px;
+    font-size: 17px;
+    border: 0.5;
+}
+
+.formulario{
+    justify-content: center;
+    text-align: center;
+}
+
+.formulario a{
+    width: 100%;
+    text-decoration: none;
+    font-size: 17px;
+    color: #1c6cd4;
+}
+
+
+#cadastrar{
+    width: 60%;
+    border-radius: 8px;
+    font-size: Inter;
+    font-size: 18px;
+    height: 35px;
+    margin: 20px 10px 10px;
+    background-color: #000000;
+    line-height: 24px;
+    color: white;
+    border: 0;
+}
+
+#sub-info{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+#sub-info a{
+    color: #1c6cd4;
+    font-family: Inter;
+}
+
+/* Desktop */
+@media(width <= 1200px){
+    .container{
+        margin: 0px 20px;
+    }
+
+    #form-img-descricao img{
+        width: 90%;
+        height: 265px;
+    }
+
+    #double-format input{
+        padding: 7px 15px;
+        font-size: 15.5px;
+    }
+
+    #double-format select{
+        padding: 7px 15px;
+        font-size: 15.5px;
+    }
+}
+
+/* Tablet */
+@media(width <= 768px){
+    .topo-form{
+        width: 90%;
+    }
+
+    #form-img-logo{
+        padding: 5px 20px;
+    }
+
+    #form-img-logo{
+        width: 100%;
+        padding: 5px 15px;
+    }
+
+    #form-img-logo img{
+        width: 115px;
+    }
+
+    #form-img-logo p{
+        font-size: 75px;
+    }
+
+    #form-img-descricao p{
+        font-size: 19px;
+        margin: 5px 20px 30px;
+    }
+
+    .recepcao h3{
+        font-size: 34px;
+    }
+
+    .recepcao p{
+        font-size: 25px;
+    }
+
+    .switch{
+        width: 55px;
+        height: 30px;
+    }
+      
+    .switch input:checked + .slider:before {
+        transform: translateX(1.25em);
+        background-color: #606060;
+        height: 25px;
+        width: 25px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 25px;
+        width: 25px;
+        left: 0.25em;
+        bottom: 0.2em;
+        background-color: white;
+        border-radius: inherit;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+      
+    .switch input:checked + .slider {
+        background-color: white;
+        color: #606060;
+    }
+
+    #double-format input{
+        padding: 7px 10px;
+        font-size: 14.5px;
+    }
+
+    #double-format select{
+        padding: 7px 10px;
+        font-size: 14.5px;
+    }
+
+    #double-format input[type="date"]{
+        width: 48%;
+    }
+}
+
+@media(width <= 668px){
+    #form-img-logo img{
+        width: 100px;
+    }
+
+    #form-img-logo p{
+        font-size: 65px;
+    }
+
+    #form-img-descricao p{
+        font-size: 17px;
+    }
+
+    #double-format input{
+        padding: 5px 7px;
+        font-size: 13.4px;
+        margin: 14px 0px 0px;
+    }
+
+    #double-format select{
+        padding: 5px 7px;
+        font-size: 13.4px;
+        margin: 14px 0px 0px;
+    }
+
+    .recepcao h3{
+        font-size: 30px;
+    }
+
+    .recepcao p{
+        font-size: 23px;
+    }
+
+    .switch input:checked + .slider:before {
+        transform: translateX(1.35em);
+        background-color: #606060;
+        height: 23px;
+        width: 23px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 23px;
+        width: 23px;
+        left: 0.3em;
+        bottom: 0.2em;
+        background-color: white;
+        border-radius: inherit;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+}
+
+/* Celular */
+@media(width <= 577px){
+    body{
+        background: linear-gradient(90deg, rgba(35,58,79,1) 5%, rgba(63,103,142,1) 90%); 
+    }
+
+    main{
+        flex-direction: column;
+        background-color: transparent;
+        height: 585px;
+    }
+
+    .topo-form{
+        width: 100%;
+    }
+
+    #form-img{
+        background-color: transparent;
+        display: flex;
+        width: 100%;
+    }
+
+    #form-img-descricao{
+        width: 100%;
+        text-align: right;
+        justify-content: right;
+    }
+
+    #form-img-descricao p{
+        padding-left: 50px;
+    }
+
+   #form-img-descricao img{
+    display: none;
+   }
+
+   #form{
+    width: 100%;
+    background-color: #A2A2A2;
+    border-radius: 10px;
+    padding: 20px 40px 60px;
+   }
+
+   #sub-form{
+    width: 100%;
+    margin-top: 0px;
+   }
+
+   .modo-escuro{
+    margin-top: 0px;
+   }
+
+   #sub-info{
+    position: fixed;
+    bottom: auto;
+    text-align: center;
+    width: 75%;
+   }
+
+   #double-format input{
+    font-size: 15px;
+}
+
+   #double-format select{
+    font-size: 15px;
+}
+
+   #double-format input[type="date"]{
+    width: 100%;
+    }
+
+    .recepcao {
+        width: 100%;
+    }
+}
+
+@media(width <= 410px){
+    #double-format input{
+        font-size: 15px;
+    }
+    
+       #double-format select{
+        font-size: 15px;
+    }
+    #double-format input[type="date"]{
+        width: 48%;
+    }
+
+    #form-img-descricao p{
+        margin: 5px 10px 5px;
+    }
+
+    #sub-info{
+        width: 65%;
+    }
+}
