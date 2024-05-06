@@ -1,10 +1,10 @@
 <?php
 require_once 'conexao.php'; 
-/*
+
 echo"<pre>";
   print_r($_POST);
 echo"</pre>";
-*/
+
 if(!empty($_POST)){
   // Obter as informações do formulário ($_POST)
   try {
@@ -37,6 +37,7 @@ if(!empty($_POST)){
     }
     
   } catch (PDOException $e) {
+    die($e);
     //throw $th;
     header("Location: ./../CadastroG.html?msgErro=Falha ao cadastrar...");
   }
