@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/formcadastro.css">
+    <script src="js/darkmode2.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div id="form-img">
+                <section id="form-img-logo">
+                    <img src="imagens/icone-inicio.png" alt="">
+                    <p>Elite</p>
+                </section>
+                <section id="form-img-descricao">
+                    <p>Explore o mundo do conhecimento ao atravessar nosso portal, abrindo as portas para uma experiência educacional única!</p>
+                    <img src="imagens/imagem-caderno.png" alt="">
+                </section>
+            </div>
+            <div id="form">
+                <div class="topo-form">
+                    <section class="recepcao">
+                        <h3>Bem-Vindo!</h3>
+                        <p>Cadastre-se.</p>
+                    </section>
+                    <section class="modo-escuro">
+                        <label class="switch">
+                            <input type="checkbox" >
+                            <span class="slider"></span>
+                        </label>
+                    </section>
+                </div>
+                <div id="sub-form">
+                    <form action="php/inclusao_aluno.php" method="post" class="formulario">
+                        <div id="double-format">
+                            <input type="text" placeholder="Nome">
+                            <input type="text" placeholder="Sobrenome">
+                        </div>
+                        <div id="double-format">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div id="double-format">
+                            <input type="tel" placeholder="Telefone">
+                            <input type="date" placeholder="Data de Nascimento">
+                        </div>
+                        <div id="double-format">
+                            <input type="text" placeholder="CPF">
+                            <select name="sexo" id="sexo" required>
+                                <option value="" disabled selected>Sexo</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Feminino</option>
+                                <option value="3">Outro</option>
+                            </select>
+                        </div>
+                        <div id="double-format">
+                            <select name="turno" id="turno" required>
+                                <option value="" disabled selected>Turno</option>
+                                <option value="">Matutino</option>
+                                <option value="">Vespertino</option>
+                                <option value="">Noturno</option>
+                            </select>
+                        </div>
+                        <div id="double-format">
+                            <input type="password" placeholder="Senha">
+                        </div>
+                        <div id="double-format">
+                            <input type="password" placeholder="Confirme sua senha">
+                        </div>
+                        <button id="cadastrar">Entrar</button>
+                    </form>
+                    <section id="sub-info">
+                        <p>Já possui conta?</p>
+                        <a href="../Index.html">Fazer Login</a>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
