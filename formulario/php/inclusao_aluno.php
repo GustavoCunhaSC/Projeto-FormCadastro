@@ -10,7 +10,7 @@ if(!empty($_POST)){
   try {
     // Prepara as informações
     // Montar a SQL(pgsql)
-    $sql = "INSERT INTO alunos
+    $sql = "INSERT INTO Alunos
             (nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos, senha_aluno)
             VALUES
             (:nome, :sobrenome, :email, :telefone, :dataDeAniversario, :cpf, :sexo, :senha)";
