@@ -48,14 +48,14 @@ if(!empty($_POST)){
       // Destruir sessao
       session_destroy();
       // Redirecionar p/ pagina inicial de login
-      header('Location:../login.html?msgErro=Email ou senha inválido');
+      header('Location:./../../Index.html?msgErro=Email ou senha inválido');
     }
 
   } catch (PDOException $e) {
     die($e->getMessage());
   }
 } else{
-  header('Location:../login.html?msgErro=Acesso não permitido ');
+  header('Location:./../../Index.html?msgErro=Acesso não permitido ');
 }
 die(); 
 ?>
