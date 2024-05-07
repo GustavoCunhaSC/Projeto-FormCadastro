@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/formcadastro.css">
-    <script src="js/darkmode2.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -28,7 +28,7 @@
                     </section>
                     <section class="modo-escuro">
                         <label class="switch">
-                            <input type="checkbox" >
+                            <input type="checkbox">
                             <span class="slider"></span>
                         </label>
                     </section>
@@ -36,18 +36,18 @@
                 <div id="sub-form">
                     <form action="" class="formulario">
                         <div id="double-format">
-                            <input type="text" placeholder="Nome">
-                            <input type="text" placeholder="Sobrenome">
+                            <input type="text" placeholder="Nome" name="nome">
+                            <input type="text" placeholder="Sobrenome" name="sobrenome">
                         </div>
                         <div id="double-format">
-                            <input type="email" placeholder="Email">
+                            <input type="email" placeholder="Email" name="email">
                         </div>
                         <div id="double-format">
-                            <input type="tel" placeholder="Telefone">
-                            <input type="date" placeholder="Data de Nascimento">
+                            <input type="tel" placeholder="Telefone" maxlength="15" onkeyup="handlePhone(event)" name="telefone">
+                            <input type="date" placeholder="Data de Nascimento" name="dataNascimento">
                         </div>
                         <div id="double-format">
-                            <input type="text" placeholder="CPF">
+                            <input type="text" placeholder="CPF" oninput="mascara(this)" name="cpf">
                             <select name="sexo" id="sexo" required>
                                 <option value="" disabled selected>Sexo</option>
                                 <option value="1">Masculino</option>
@@ -58,18 +58,18 @@
                         <div id="double-format">
                             <select name="turno" id="turno" required>
                                 <option value="" disabled selected>Turno</option>
-                                <option value="">Matutino</option>
-                                <option value="">Vespertino</option>
-                                <option value="">Noturno</option>
+                                <option value="1">Matutino</option>
+                                <option value="2">Vespertino</option>
+                                <option value="3">Noturno</option>
                             </select>
                         </div>
                         <div id="double-format">
-                            <input type="password" placeholder="Senha">
+                            <input type="password" placeholder="Senha" id="senha" name="senha">
                         </div>
                         <div id="double-format">
-                            <input type="password" placeholder="Confirme sua senha">
+                            <input type="password" placeholder="Confirme sua senha" id="confirm-senha" name="confirmaSenha">
                         </div>
-                        <button id="cadastrar">Entrar</button>
+                        <button id="cadastrar" name="cadastrar">Cadastrar</button>
                     </form>
                     <section id="sub-info">
                         <p>Já possui conta?</p>

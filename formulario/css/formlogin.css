@@ -320,10 +320,21 @@ main{
 
     #form-img-descricao p{
         padding-left: 50px;
+        color: #fff;
     }
 
    #form-img-descricao img{
     display: none;
+   }
+
+   #form-img-logo p{
+    color: #fff;
+   }
+
+   #form-img-logo img{
+    content: url(../imagens/icone-inicio-mobile.png);
+    color: #fff;
+    width: 120px;
    }
 
    #form{
