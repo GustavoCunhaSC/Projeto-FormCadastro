@@ -1,0 +1,21 @@
+{
+  "name": "projeto-formcadastro",
+  "version": "1.0.0",
+  "description": "Este projeto é focado na criação de um formulário de cadastro de novos alunos para uma instituição educacional. O objetivo é coletar informações relevantes dos usuários para criar um cadastro no sistema.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^24.0.0"
+  }
+}
