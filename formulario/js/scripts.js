@@ -82,3 +82,10 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+export default {
+  toggleDarkMode,
+  maskCPF,
+  maskPhone,
+  togglePasswordVisibility,
+  validatePassword
+};
