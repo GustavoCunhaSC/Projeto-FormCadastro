@@ -11,9 +11,9 @@ if(!empty($_POST)){
     // Prepara as informações
     // Montar a SQL(pgsql)
     $sql = "INSERT INTO alunos
-            (nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos, senha_aluno)
+            (nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos, turno, senha_aluno)
             VALUES
-            (:nome, :sobrenome, :email, :telefone, :dataDeAniversario, :cpf, :sexo, :senha)";
+            (:nome, :sobrenome, :email, :telefone, :dataDeAniversario, :cpf, :sexo, :turno, :senha)";
 
     // Preparar a SQL(pdo)
     $stmt = $pdo ->prepare($sql);
@@ -27,7 +27,8 @@ if(!empty($_POST)){
       ':dataDeAniversario' => $_POST['dataDeAniversario'],
       ':cpf'=> $_POST['cpf'],
       ':sexo' => $_POST['sexo'],
-      ':senha'=> $_POST['senha']
+      ':senha'=> $_POST['senha'],
+      ':turno' => $_POST['turno']
     );
     
     // Executar a SQL(INSERT)
@@ -37,8 +38,11 @@ if(!empty($_POST)){
     }
     
   } catch (PDOException $e) {
-    //throw $th;
-    header("Location: ../cadasto.html?msgErro=Falha ao cadastrar...");
+    
+    echo "<pre>";
+    die($e);
+    
+    header("Location: ../cadastro.html?msgErro=Falha ao cadastrar...");
   }
 } else{
   header('Location: ../cadastro.html?msgErro=Erro de acesso.');
