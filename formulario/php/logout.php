@@ -2,10 +2,10 @@
    session_start();
 
    if(empty($_SESSION)){
-     header("Location: ../login.html?msgErro=Você precisao se autenticar.");
+     header("Location: ../../Index.html?msgErro=Você precisa se autenticar.");
     } else{
       session_destroy();
-      header("Location: ../login.html?msgSecesso=Logout efetuado com sucesso!");
+      header("Location: ../../Index.html?msgSecesso=Logout efetuado com sucesso!");
     }
     die();
 ?>
