@@ -6,9 +6,9 @@
    header("Location: ../../login.html?msgErro=Você precisao se autenticar");
    die();
   } 
- $nomezin = $_SESSION['cpf_alunos'];
-  $alunos = array();
-  $sql = "SELECT * FROM alunos WHERE cpf_alunos = '$nomezin'";
+ $cpf = $_SESSION['cpf_alunos'];
+ $sql = "SELECT * FROM alunos WHERE cpf_alunos = '$cpf'";
+ $alunos = array();
   try {
     $stmt = $pdo->prepare($sql);
     if($stmt->execute()){
@@ -54,24 +54,29 @@
             <th scope="col">Email</th>
             <th scope="col">Telefone</th>
             <th scope="col">Nascimento</th>
+            <th scope="col">Turno</th>
           </tr>
         </thead>
         <tbody>
-          <?php foreach($alunos as $m) { ?>
+          <!-- IMPORTANTE DEIXAR O LAÇO DE REPATIÇÃO < ? php foreach($alunos as $info){ pode deixar aqui dentro vazio se preferir }?> PARA ARMAZENAR OS DADOS RETORNADOS DO BANCO NA VARIÁVEL $info   -->
+          <?php foreach($alunos as $info) { ?>
             <tr>
-              <td scope="row"> <?php echo $m['nome_alunos']; ?> </td>
-              <td scope="row"> <?php echo $m['sobrenome_alunos']; ?> </td>
-              <td scope="row"> <?php echo $m['cpf_alunos']; ?> </td>
-              <td scope="row"> <?php echo $m['email_alunos']; ?> </td>
-              <td scope="row"> <?php echo $m['telefone_alunos']; ?> </td>
-              <td scope="row"> <?php echo $m['dtnasci_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['nome_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['sobrenome_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['cpf_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['email_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['telefone_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['dtnasci_alunos']; ?> </td>
+              <td scope="row"> <?php echo $info['turno']; ?> </td>
             </tr>
-
-          <?php } ?>
-           
-        </tbody>
-      </table>
-    </div>
-  <?php } ?>
+            <?php } ?>
+            
+          </tbody>
+        </table>
+      </div>
+      <?php } ?>
+    
+      <!-- EXEMPLO DE COMO USAR OS DADOS-->
+    <p>O aluno <?php echo $info['nome_alunos']; ?> de telefone <?php echo $info['telefone_alunos']?> está há 5 dias sem pagar a mensalidade, formalizar o pedido de pagamento no email <?php echo $info['email_alunos'];?> </p>
 </body>
 </html>
