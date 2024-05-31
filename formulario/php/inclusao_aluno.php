@@ -34,7 +34,7 @@ if(!empty($_POST)){
     // Executar a SQL(INSERT)
     // Realizar a inserção das informações no BD
     if($stmt ->execute($dados)){
-      header("Location: ../login.html?msgSucesso=Cadastro realizado com sucesso!");
+      header("Location: ../../Index.html?msgSucesso=Cadastro realizado com sucesso!");
     }
     
   } catch (PDOException $e) {
@@ -42,10 +42,10 @@ if(!empty($_POST)){
     echo "<pre>";
     die($e);
     
-    header("Location: ../cadastro.html?msgErro=Falha ao cadastrar...");
+    header("Location: ../CadastroG.html?msgErro=Falha ao cadastrar...");
   }
 } else{
-  header('Location: ../cadastro.html?msgErro=Erro de acesso.');
+  header('Location: ../CadastroG.html?msgErro=Erro de acesso.');
 }
 die();
 // Redirecionar para a página inicial (logi) c/ mensagem de erro/sucesso
