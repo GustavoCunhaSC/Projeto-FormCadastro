@@ -3,7 +3,7 @@
    session_start();
  if(empty($_SESSION)){
   session_destroy();
-   header("Location: ../../login.html?msgErro=Você precisao se autenticar");
+   header("Location: ../../../Index.html?msgErro=Você precisao se autenticar");
    die();
   } 
  $cpf = $_SESSION['cpf_alunos'];

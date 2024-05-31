@@ -55,7 +55,7 @@ if(!empty($_POST)){
     die($e->getMessage());
   }
 } else{
-  header('Location:../login.html?msgErro=Acesso não permitido ');
+  header('Location:../../Index.html?msgErro=Acesso não permitido ');
 }
 die(); 
 ?>
