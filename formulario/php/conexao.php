@@ -1,8 +1,8 @@
 <?php 
 $endereco = 'localhost';
-$banco = 'db_elite';
+$banco = 'dbelite';
 $usuario = 'postgres';
-$senha = '1234';
+$senha = 'admin';
 
 try {
   //code...
