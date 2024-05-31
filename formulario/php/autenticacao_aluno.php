@@ -13,14 +13,14 @@ if(!empty($_POST)){
   session_start();
   try {
     // Montar a SQL
-    $sql = "SELECT nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos FROM alunos WHERE email_alunos = :email AND senha_aluno = :senha";
+    $sql = "SELECT nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos FROM alunos WHERE cpf_alunos = :cpf AND senha_aluno = :senha";
 
     // Preparar a SQL(pdo)
     $stmt = $pdo ->prepare($sql);
 
     // Definir/organizar os dados p/SQL
     $dados = array(
-      ':email' => $_POST['email'],
+      ':cpf' => $_POST['cpf'],
       ':senha' => $_POST['senha']
     );
 
