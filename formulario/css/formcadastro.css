@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color-main : #A2A2A2;
+    --color-texto : black;
+    --color-image : #CCCCCC;
+    --color-texbutao : white;
+}
+
+.dark-mode:root{
+    --color-main :#091E3A;
+    --color-texto : white;
+    --color-image :#404040;
+    --color-texbutao : black;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -25,7 +39,7 @@ main{
     width: 100%;
     height: fit-content;
     border-radius: 10px;
-    background-color: #A2A2A2;
+    background-color: var(--color-main);
     align-items: center;
     justify-content: center;
 }
@@ -35,7 +49,7 @@ main{
 #form-img{
     flex-direction: column;
     width: 50%;
-    background-color: #CCCCCC;
+    background-color:var(--color-image);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -58,7 +72,7 @@ main{
 #form-img-logo p{
     font-family: Inria Serif;
     font-size: 83px;
-    color: #242424;
+    color: var(--color-texto);
 }
 
 #form-img-descricao{
@@ -70,6 +84,7 @@ main{
     font-size: 20px;
     text-align: right;
     margin: 10px 35px 20px;
+    color: var(--color-texto);
 }
 
 #form-img-descricao img{
@@ -155,12 +170,6 @@ main{
     width: 28px;
 }
 
-.dark-mode {
-    background-color: #091E3A;
-    color: #fff;
-    /* Adicione mais estilos conforme necessário */
-}
-
 .recepcao{
     margin: 10px 0px;
     text-align: left;
@@ -169,13 +178,13 @@ main{
 .recepcao h3{
     font-size: 37px;
     font-family: Inria Serif;
-    color: #242424;
+    color: var(--color-texto);
 }
 
 .recepcao p{
     font-size: 27px;
     font-family: Inter;
-    color: #242424;
+    color: var(--color-texto);
 }
 
 #double-format{
@@ -227,9 +236,9 @@ main{
     font-size: 18px;
     height: 35px;
     margin: 20px 10px 10px;
-    background-color: #000000;
+    background-color: var(--color-texto);
     line-height: 24px;
-    color: white;
+    color: var(--color-texbutao);
     border: 0;
 }
 
@@ -241,6 +250,11 @@ main{
     margin-top: 5px;
     font-size: 17px;
 }
+
+#sub-info p{
+    color: var(--color-texto);
+}
+
 
 #sub-info a{
     color: #1c6cd4;
