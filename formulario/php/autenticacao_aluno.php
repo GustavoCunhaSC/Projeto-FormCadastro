@@ -42,7 +42,7 @@ if(!empty($_POST)){
       $_SESSION['sexo_alunos'] = $result['sexo_alunos'];
 
       // Redirecionar p/ pagina inicial (ambiente logado)
-      header('Location:./pages/index.php');
+      header('Location:../profile.php');
     } else{ //Resultado da consulta não trouxe nenhum registro
       // Senao, retorna falha na autenticação
       // Destruir sessao
