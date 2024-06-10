@@ -13,7 +13,7 @@ if(!empty($_POST)){
   session_start();
   try {
     // Montar a SQL
-    $sql = "SELECT nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos FROM alunos WHERE cpf_alunos = :cpf AND senha_aluno = :senha";
+    $sql = "SELECT nome_alunos, sobrenome_alunos, email_alunos, telefone_alunos, dtnasci_alunos, cpf_alunos, sexo_alunos, turno FROM alunos WHERE cpf_alunos = :cpf AND senha_aluno = :senha";
 
     // Preparar a SQL(pdo)
     $stmt = $pdo ->prepare($sql);
@@ -40,6 +40,7 @@ if(!empty($_POST)){
       $_SESSION['dtnasci_alunos'] = $result['dtnasci_alunos'];
       $_SESSION['cpf_alunos'] = $result['cpf_alunos'];
       $_SESSION['sexo_alunos'] = $result['sexo_alunos'];
+      $_SESSION['turno'] = $result['turno'];
 
       // Redirecionar p/ pagina inicial (ambiente logado)
       header('Location:../profile.php');
