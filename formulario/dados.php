@@ -44,12 +44,12 @@ if(empty($_SESSION)){
 
       <div class="profile">
          <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">eduardo t</h3>
+         <h3 class="name"><?php echo $_SESSION['nome_alunos'];?></h3>
          <p class="role">studen</p>
          <a href="profile.html" class="btn">ver perfil</a>
          <div class="flex-btn">
             <a href="update.html" class="option-btn">Editar</a>
-            <a href="../index.html" class="option-btn">Sair</a>
+            <a href="./php/logout.php" class="option-btn">Sair</a>
          </div>
       </div>
 
@@ -65,14 +65,14 @@ if(empty($_SESSION)){
 
    <div class="profile">
       <img src="images/pic-1.jpg" class="image" alt="">
-      <h3 class="name">Eduardo t</h3>
+      <h3 class="name"><?php echo $_SESSION['nome_alunos'];?></h3>
       <p class="role">studen</p>
-      <a href="profile.html" class="btn">ver perfil</a>
+      <a href="profile.php" class="btn">ver perfil</a>
    </div>
 
    <nav class="navbar">
       <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="dados.html"><i class="fas fa-chalkboard-user"></i><span>Dados</span></a>
+      <a href="dados.php"><i class="fas fa-chalkboard-user"></i><span>Dados</span></a>
       <a href="financeiro.html"><i class="fas fa-usd"></i><span>Financeiro</span></a>
       <a href="contact.html"><i class="fas fa-headset"></i><span>contate-nos</span></a>
       <a href="about.html"><i class="fas fa-question"></i><span>Sobre</span></a>
@@ -94,13 +94,13 @@ if(empty($_SESSION)){
 
       <div class="box-container">
          <div class="content">
-            <h3>&nbsp;Nome&nbsp;</h3>
-            <h3>&nbsp;Teletefone&nbsp;</h3>
-            <h3>&nbsp;E-mail&nbsp;</h3>
-            <h3>&nbsp;Data de Nascimento&nbsp;</h3>
-            <h3>&nbsp;Sexo&nbsp;</h3>
-            <h3>&nbsp;CPF&nbsp;</h3>
-            <h3>&nbsp;turno&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['nome_alunos'];?>&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['telefone_alunos'];?>&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['email_alunos'];?>&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['dtnasci_alunos'];?>&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['sexo_alunos'];?>&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['cpf_alunos'];?>&nbsp;</h3>
+            <h3>&nbsp;<?php echo $_SESSION['turno'];?>&nbsp;</h3>
          </div>
       </div>
 
