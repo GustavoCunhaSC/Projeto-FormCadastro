@@ -72,7 +72,7 @@ if(empty($_SESSION)){
 
    <nav class="navbar">
       <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="dados.html"><i class="fas fa-chalkboard-user"></i><span>Dados</span></a>
+      <a href="dados.php"><i class="fas fa-chalkboard-user"></i><span>Dados</span></a>
       <a href="financeiro.html"><i class="fas fa-usd"></i><span>Financeiro</span></a>
       <a href="contact.html"><i class="fas fa-headset"></i><span>contate-nos</span></a>
       <a href="about.html"><i class="fas fa-question"></i><span>Sobre</span></a>
