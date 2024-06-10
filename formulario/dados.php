@@ -1,3 +1,12 @@
+<?php 
+require_once 'php/conexao.php';
+session_start();
+if(empty($_SESSION)){
+ session_destroy();
+  header("Location: ../Index.html?msgErro=Você precisao se autenticar");
+  die();
+ } 
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
