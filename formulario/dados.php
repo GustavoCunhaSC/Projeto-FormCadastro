@@ -23,12 +23,12 @@ if(empty($_SESSION)){
 
 </head>
 <body>
-
+   
 <header class="header">
    
    <section class="flex">
 
-      <a href="home.html" class="logo">Elite.</a>
+      <a href="home.php" class="logo">Elite.</a>
 
       <form action="search.html" method="post" class="search-form">
          <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
@@ -46,9 +46,9 @@ if(empty($_SESSION)){
          <img src="images/pic-1.jpg" class="image" alt="">
          <h3 class="name"><?php echo $_SESSION['nome_alunos'];?></h3>
          <p class="role">studen</p>
-         <a href="profile.html" class="btn">ver perfil</a>
+         <a href="profile.php" class="btn">ver perfil</a>
          <div class="flex-btn">
-            <a href="update.html" class="option-btn">Editar</a>
+            <a href="update.php" class="option-btn">Editar</a>
             <a href="./php/logout.php" class="option-btn">Sair</a>
          </div>
       </div>
@@ -71,15 +71,14 @@ if(empty($_SESSION)){
    </div>
 
    <nav class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="home.php"><i class="fas fa-home"></i><span>home</span></a>
       <a href="dados.php"><i class="fas fa-chalkboard-user"></i><span>Dados</span></a>
-      <a href="financeiro.html"><i class="fas fa-usd"></i><span>Financeiro</span></a>
-      <a href="contact.html"><i class="fas fa-headset"></i><span>contate-nos</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>Sobre</span></a>
+      <a href="financeiro.php"><i class="fas fa-usd"></i><span>Financeiro</span></a>
+      <a href="contact.php"><i class="fas fa-headset"></i><span>contate-nos</span></a>
+      <a href="about.php"><i class="fas fa-question"></i><span>Sobre</span></a>
    </nav>
 
 </div>
-
 
 <section class="dados">
 
